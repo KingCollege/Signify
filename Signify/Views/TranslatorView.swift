@@ -42,16 +42,6 @@ struct TranslatorView: View {
     }
     
     
-    var navigation: some View {
-        HStack{
-            NavigationBtn(selected: false, iconName: "book.fill", name: "Dictionary")
-            Spacer()
-            CameraBtn()
-            Spacer()
-            NavigationBtn(selected: true, iconName: "textformat.size", name: "Translate")
-        }
-    }
-    
     var body: some View {
         VStack(alignment: .center){
             VStack(alignment: .leading){
@@ -72,12 +62,12 @@ struct TranslatorView: View {
             else{
                 Text("Type something....")
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                    .background(Color.white)
+                    //.background(Color.yellow.opacity(0))
             }
             translateBnt.padding(.bottom, 100)
 
         }
-        .padding().frame(minWidth: 0, maxWidth: .infinity)
+        .padding().frame(minWidth: 0, maxWidth: .infinity)//.background(Color.yellow.opacity(0.1))
 
     }
 }

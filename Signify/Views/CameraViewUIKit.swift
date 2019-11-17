@@ -96,6 +96,11 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
          */
         guard let handSignsModel = try? VNCoreMLModel(for: Model().model) else { return }
         
+        if self.observableScan.counter > 0 { return }
+        
+        DispatchQueue.main.async {
+            self.observableScan.counter = 10
+        }
         /* Create a Core ML Vision request
          The completion block will execute when the request finishes execution and fetches a response.
          */
@@ -111,7 +116,7 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
             /* Results array holds predictions iwth decreasing level of confidence.
              Thus we choose the first one with highest confidence. */
             guard let firstResult = results.first else { return }
-            
+            print(firstResult)
             
             var predictionString = ""
             
@@ -145,37 +150,59 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
                     predictionString = "L"
                 case Alphabet.M.rawValue:
                     predictionString = "M"
-                case Alphabet.M.rawValue:
+                case Alphabet.N.rawValue:
+                predictionString = "N"
+                case Alphabet.O.rawValue:
                     predictionString = "O"
-                case Alphabet.M.rawValue:
+                case Alphabet.P.rawValue:
                     predictionString = "P"
-                case Alphabet.M.rawValue:
+                case Alphabet.Q.rawValue:
                     predictionString = "Q"
-                case Alphabet.M.rawValue:
+                case Alphabet.R.rawValue:
                     predictionString = "R"
-                case Alphabet.M.rawValue:
+                case Alphabet.S.rawValue:
                     predictionString = "S"
-                case Alphabet.M.rawValue:
+                case Alphabet.T.rawValue:
                     predictionString = "T"
-                case Alphabet.M.rawValue:
+                case Alphabet.U.rawValue:
                     predictionString = "U"
-                case Alphabet.M.rawValue:
+                case Alphabet.V.rawValue:
                     predictionString = "V"
-                case Alphabet.M.rawValue:
+                case Alphabet.W.rawValue:
                     predictionString = "W"
-                case Alphabet.M.rawValue:
+                case Alphabet.X.rawValue:
                     predictionString = "X"
-                case Alphabet.M.rawValue:
+                case Alphabet.Y.rawValue:
                     predictionString = "Y"
-                case Alphabet.M.rawValue:
+                case Alphabet.Z.rawValue:
                     predictionString = "Z"
                 default:
-                    break
+                    predictionString = ""
                 }
                 
-                print(predictionString)
-               self.observableScan.letter = predictionString
-               self.observableScan.confidence = firstResult.confidence
+                if predictionString != "Null" {
+                    self.observableScan.letter = predictionString
+                    
+                    self.observableScan.sequence.append(Character(predictionString))
+                }
+                
+//                if self.observableScan.sample.count <= 20 {
+//                    self.observableScan.sample.append(predictionString)
+//                }else{
+//                    var counts = [0 , 0, 0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0 ]
+//                    let arrayOfText: [String] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+//                    for i in self.observableScan.sample {
+//                        guard let letterIndex: Int = arrayOfText.firstIndex(of: i) else {continue}
+//                        counts[letterIndex] += 1
+//                    }
+//                    let index: Int = counts.firstIndex(of: counts.max()!)!
+//                    self.observableScan.letter = arrayOfText[index]
+//
+//                    self.observableScan.sequence.append(Character(arrayOfText[index]))
+//                    //self.observableScan.confidence = firstResult.confidence
+//                    self.observableScan.sample = []
+//
+//                }
                 
             }
             

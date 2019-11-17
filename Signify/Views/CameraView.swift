@@ -23,6 +23,8 @@ struct CameraView: View {
             CameraViweWrapper(viewController: CameraViewController(observed: scanData))
            
             CameraControlLayerView(scanData: self.scanData)
+            
+            Text("\(scanData.counter)").bold().font(.system(size: 80)).opacity(0.8).frame(minWidth: 0, maxWidth: .infinity)
         }.edgesIgnoringSafeArea(.all)
         .expand()
     }

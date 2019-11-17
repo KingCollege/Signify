@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct NavigationBtn: View {
+    
+    @Binding var offset: CGFloat
+    var index: Int
+    @Binding var current: Int
     var selected = false
     var iconName = "book.fill"
     var height: CGFloat = 30
@@ -16,7 +20,22 @@ struct NavigationBtn: View {
     var name = "Name"
     
     var body: some View {
-        Button(action: {}){
+        Button(action: {
+            if self.index == 3{
+                if self.current == 1 || self.current == 2{
+                    self.offset = -UIScreen.main.bounds.width
+                    self.current = 3
+                }
+                
+            }
+            else if self.index == 1 {
+                if self.current == 3 || self.current == 2{
+                    self.offset = UIScreen.main.bounds.width
+                    self.current = 1
+                }
+                
+            }
+        }){
             VStack(spacing: 5){
                 Image(systemName: iconName).resizable()
                     .frame(width: width, height: height)
@@ -33,8 +52,3 @@ struct NavigationBtn: View {
     }
 }
 
-struct NavigationBtn_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationBtn()
-    }
-}

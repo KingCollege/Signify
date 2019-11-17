@@ -12,7 +12,8 @@ struct SignLanguageCard: View {
     var letter = "A"
     var body: some View {
         VStack(spacing: 50){
-            Text("✌🏻").font(.system(size: 80))
+            if letter != " " { Image(letter).resizable().frame(width: 60, height: 80) }
+            else{ Text("")}
             Text(letter).bold().font(.system(size: 45))
         }.padding()
         .frame(width: 200, height: 300, alignment: .bottom)

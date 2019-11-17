@@ -22,8 +22,8 @@ enum Alphabet: String {
     case K = "K"
     case L = "L"
     case M = "M"
-    case N
-    case O
+    case N = "N"
+    case O 
     case P
     case Q
     case R

@@ -15,6 +15,7 @@
 		0B635DFC2380B66F006D115F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DFB2380B66F006D115F /* BlurView.swift */; };
 		0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A952380CCA800987D54 /* ObservableScan.swift */; };
 		0B6B4A982380D9FD00987D54 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */; };
+		5DBF39482380F3FC00A5A695 /* Sesgoritma.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF39472380F3FC00A5A695 /* Sesgoritma.mlmodel */; };
 		5DFD3A44238070F3002962EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A43238070F3002962EB /* AppDelegate.swift */; };
 		5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A45238070F3002962EB /* SceneDelegate.swift */; };
 		5DFD3A48238070F3002962EB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A47238070F3002962EB /* CameraView.swift */; };
@@ -61,6 +62,7 @@
 		0B635DFB2380B66F006D115F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Signify/Views/BlurView.swift; sourceTree = SOURCE_ROOT; };
 		0B6B4A952380CCA800987D54 /* ObservableScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObservableScan.swift; path = Signify/Views/ObservableScan.swift; sourceTree = SOURCE_ROOT; };
 		0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		5DBF39472380F3FC00A5A695 /* Sesgoritma.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Sesgoritma.mlmodel; sourceTree = "<group>"; };
 		5DFD3A40238070F3002962EB /* Signify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFD3A43238070F3002962EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DFD3A45238070F3002962EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				5DFD3A73238079F6002962EB /* Models */,
 				5DFD3A43238070F3002962EB /* AppDelegate.swift */,
 				5DFD3A45238070F3002962EB /* SceneDelegate.swift */,
+				5DBF39472380F3FC00A5A695 /* Sesgoritma.mlmodel */,
 				5DFD3A8D2380EC0C002962EB /* Model.mlmodel */,
 				5DFD3A49238070F8002962EB /* Assets.xcassets */,
 				5DFD3A4E238070F8002962EB /* LaunchScreen.storyboard */,
@@ -369,6 +372,7 @@
 				5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */,
 				5DFD3A8E2380EC0C002962EB /* Model.mlmodel in Sources */,
 				0B635DF02380897A006D115F /* CameraViewUIKit.swift in Sources */,
+				5DBF39482380F3FC00A5A695 /* Sesgoritma.mlmodel in Sources */,
 				5DFD3A48238070F3002962EB /* CameraView.swift in Sources */,
 				0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */,
 				5DFD3A8C2380EB92002962EB /* DictionaryView.swift in Sources */,

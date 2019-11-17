@@ -16,11 +16,13 @@ struct RootView: View {
     
     var navigation: some View {
         HStack{
-            NavigationBtn(selected: self.index == 1 ? true : false, iconName: "book.fill", name: "Dictionary")
+            NavigationBtn(offset: self.$offset, index: 1, current: self.$index
+                , selected: self.index == 1 ? true : false, iconName: "book.fill", name: "Dictionary")
             Spacer()
-            CameraBtn()
+            CameraBtn(offset: self.$offset, index: 2, current: self.$index)
             Spacer()
-            NavigationBtn(selected: self.index == 3 ? true : false, iconName: "textformat.size", name: "Translate")
+            NavigationBtn(offset: self.$offset, index: 3, current: self.$index
+                , selected: self.index == 3 ? true : false, iconName: "textformat.size", name: "Translate")
         }
     }
     
