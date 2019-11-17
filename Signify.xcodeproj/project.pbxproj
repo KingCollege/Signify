@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B635DEE23807DCE006D115F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DED23807DCE006D115F /* CameraViewController.swift */; };
+		0B635DF02380897A006D115F /* CameraViewUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DEF2380897A006D115F /* CameraViewUIKit.swift */; };
+		0B635DF423808E0F006D115F /* CameraViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF323808E0F006D115F /* CameraViewWrapper.swift */; };
+		0B635DF623809A33006D115F /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF523809A33006D115F /* Alphabet.swift */; };
+		0B635DF82380A0D8006D115F /* CameraControlLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF72380A0D8006D115F /* CameraControlLayerView.swift */; };
+		0B635DFA2380A3DD006D115F /* Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF92380A3DD006D115F /* Model.mlmodel */; };
+		0B635DFC2380B66F006D115F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DFB2380B66F006D115F /* BlurView.swift */; };
+		0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A952380CCA800987D54 /* ObservableScan.swift */; };
+		0B6B4A982380D9FD00987D54 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */; };
 		5DFD3A44238070F3002962EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A43238070F3002962EB /* AppDelegate.swift */; };
 		5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A45238070F3002962EB /* SceneDelegate.swift */; };
-		5DFD3A48238070F3002962EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A47238070F3002962EB /* ContentView.swift */; };
+		5DFD3A48238070F3002962EB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A47238070F3002962EB /* CameraView.swift */; };
 		5DFD3A4A238070F8002962EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DFD3A49238070F8002962EB /* Assets.xcassets */; };
 		5DFD3A4D238070F8002962EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DFD3A4C238070F8002962EB /* Preview Assets.xcassets */; };
 		5DFD3A50238070F8002962EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFD3A4E238070F8002962EB /* LaunchScreen.storyboard */; };
@@ -43,10 +52,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B635DED23807DCE006D115F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		0B635DEF2380897A006D115F /* CameraViewUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewUIKit.swift; sourceTree = "<group>"; };
+		0B635DF323808E0F006D115F /* CameraViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewWrapper.swift; sourceTree = "<group>"; };
+		0B635DF523809A33006D115F /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alphabet.swift; path = Signify/Views/Alphabet.swift; sourceTree = SOURCE_ROOT; };
+		0B635DF72380A0D8006D115F /* CameraControlLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlLayerView.swift; sourceTree = "<group>"; };
+		0B635DF92380A3DD006D115F /* Model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Model.mlmodel; path = ../../../Downloads/35aefd9aa23d4ff0824259f39b9e3096.CoreML/Model.mlmodel; sourceTree = "<group>"; };
+		0B635DFB2380B66F006D115F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Signify/Views/BlurView.swift; sourceTree = SOURCE_ROOT; };
+		0B6B4A952380CCA800987D54 /* ObservableScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObservableScan.swift; path = Signify/Views/ObservableScan.swift; sourceTree = SOURCE_ROOT; };
+		0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		5DFD3A40238070F3002962EB /* Signify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFD3A43238070F3002962EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DFD3A45238070F3002962EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5DFD3A47238070F3002962EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5DFD3A47238070F3002962EB /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		5DFD3A49238070F8002962EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DFD3A4C238070F8002962EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5DFD3A4F238070F8002962EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,6 +141,7 @@
 				5DFD3A45238070F3002962EB /* SceneDelegate.swift */,
 				5DFD3A49238070F8002962EB /* Assets.xcassets */,
 				5DFD3A4E238070F8002962EB /* LaunchScreen.storyboard */,
+				0B635DF92380A3DD006D115F /* Model.mlmodel */,
 				5DFD3A51238070F8002962EB /* Info.plist */,
 				5DFD3A4B238070F8002962EB /* Preview Content */,
 			);
@@ -158,6 +177,7 @@
 		5DFD3A73238079F6002962EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0B635DF523809A33006D115F /* Alphabet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,9 +185,14 @@
 		5DFD3A74238079FF002962EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5DFD3A47238070F3002962EB /* ContentView.swift */,
+				5DFD3A47238070F3002962EB /* CameraView.swift */,
 				5DFD3A7723807D22002962EB /* TranslatorView.swift */,
 				5DFD3A892380CC0A002962EB /* RootView.swift */,
+				0B635DED23807DCE006D115F /* CameraViewController.swift */,
+				0B635DEF2380897A006D115F /* CameraViewUIKit.swift */,
+				0B635DF323808E0F006D115F /* CameraViewWrapper.swift */,
+				0B635DF72380A0D8006D115F /* CameraControlLayerView.swift */,
+				0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +204,7 @@
 				5DFD3A7B238087BB002962EB /* NavigationBtn.swift */,
 				5DFD3A7F238087CF002962EB /* CameraBtn.swift */,
 				5DFD3A83238094E9002962EB /* SignLanguageCard.swift */,
+				0B635DFB2380B66F006D115F /* BlurView.swift */,
 			);
 			path = SupportViews;
 			sourceTree = "<group>";
@@ -188,6 +214,7 @@
 			children = (
 				5DFD3A812380881D002962EB /* TextFieldObservable.swift */,
 				5DFD3A872380CA3C002962EB /* ViewRouter.swift */,
+				0B6B4A952380CCA800987D54 /* ObservableScan.swift */,
 			);
 			path = Observables;
 			sourceTree = "<group>";
@@ -331,9 +358,20 @@
 				5DFD3A882380CA3C002962EB /* ViewRouter.swift in Sources */,
 				5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */,
 				5DFD3A822380881D002962EB /* TextFieldObservable.swift in Sources */,
-				5DFD3A48238070F3002962EB /* ContentView.swift in Sources */,
+				5DFD3A48238070F3002962EB /* CameraView.swift in Sources */,
 				5DFD3A80238087CF002962EB /* CameraBtn.swift in Sources */,
 				5DFD3A8A2380CC0A002962EB /* RootView.swift in Sources */,
+				0B635DF82380A0D8006D115F /* CameraControlLayerView.swift in Sources */,
+				0B6B4A982380D9FD00987D54 /* SwiftUIView.swift in Sources */,
+				5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */,
+				0B635DF02380897A006D115F /* CameraViewUIKit.swift in Sources */,
+				5DFD3A48238070F3002962EB /* CameraView.swift in Sources */,
+				0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */,
+				0B635DF623809A33006D115F /* Alphabet.swift in Sources */,
+				0B635DFA2380A3DD006D115F /* Model.mlmodel in Sources */,
+				0B635DFC2380B66F006D115F /* BlurView.swift in Sources */,
+				0B635DEE23807DCE006D115F /* CameraViewController.swift in Sources */,
+				0B635DF423808E0F006D115F /* CameraViewWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,14 +538,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signify/Preview Content\"";
-				DEVELOPMENT_TEAM = 39DZ4HK4MS;
+				DEVELOPMENT_TEAM = 6C75DBD4UC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mandu.Signify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalin.Signify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -520,14 +558,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signify/Preview Content\"";
-				DEVELOPMENT_TEAM = 39DZ4HK4MS;
+				DEVELOPMENT_TEAM = 6C75DBD4UC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mandu.Signify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalin.Signify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

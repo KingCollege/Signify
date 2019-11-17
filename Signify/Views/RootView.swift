@@ -26,14 +26,15 @@ struct RootView: View {
     
     var body: some View {
        ZStack{
-            ContentView()
+            CameraView()
             .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.height)
                 .offset(x: self.offset - UIScreen.main.bounds.width, y: 0)
+
+            CameraView()
+                .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.height)
+                .offset(x: self.offset, y: 0)
             TranslatorView(textFieldObsver: self.textFieldObsver)
                     .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.height)
-                .offset(x: self.offset, y: 0)
-            ContentView()
-                .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.height)
                 .offset(x: self.offset + UIScreen.main.bounds.width, y: 0)
         VStack{
             Spacer()
