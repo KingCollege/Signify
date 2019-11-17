@@ -170,7 +170,7 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
         /* Initialise Core ML model
          We create a model container to be used with VNCoreMLRequest based on our HandSigns Core ML model.
          */
-        guard let handSignsModel = try? VNCoreMLModel(for: sign().model) else { return }
+        guard let handSignsModel = try? VNCoreMLModel(for: model_5().model) else { return }
     
         
         if self.observableScan.counter > 0 { return }
