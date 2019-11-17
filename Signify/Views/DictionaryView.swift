@@ -61,7 +61,7 @@ struct BottomView : View{
     var body: some View{
         VStack(){
             Spacer()
-            Rectangle().fill(LinearGradient(gradient: Gradient(colors: [Color.white.opacity(1), Color.white.opacity(1)]), startPoint: .top, endPoint: .bottom)).frame(height: 50, alignment:Alignment.bottomLeading)
+            Rectangle().fill(LinearGradient(gradient: Gradient(colors: [Color.white.opacity(1), Color.white.opacity(1)]), startPoint: .top, endPoint: .bottom)).frame(height: 70, alignment:Alignment.bottomLeading)
         }.edgesIgnoringSafeArea(.bottom)
     }
 }

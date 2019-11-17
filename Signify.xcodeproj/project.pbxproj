@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,8 +15,20 @@
 		0B635DFC2380B66F006D115F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DFB2380B66F006D115F /* BlurView.swift */; };
 		0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A952380CCA800987D54 /* ObservableScan.swift */; };
 		0B6B4A982380D9FD00987D54 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */; };
+		0B946E9F2381580F00DFC3F0 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B946E9E2381580F00DFC3F0 /* LottieView.swift */; };
+		0B946EA62381586400DFC3F0 /* 448-ripple-loading-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B946EA12381586400DFC3F0 /* 448-ripple-loading-animation.json */; };
+		0B946EA72381586400DFC3F0 /* 4222-camera-scanning.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B946EA22381586400DFC3F0 /* 4222-camera-scanning.json */; };
+		0B946EA82381586400DFC3F0 /* 1221-loader-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B946EA32381586400DFC3F0 /* 1221-loader-animation.json */; };
+		0B946EA92381586400DFC3F0 /* 7485-abstract-animation-for-apps.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B946EA42381586400DFC3F0 /* 7485-abstract-animation-for-apps.json */; };
+		0B946EAA2381586400DFC3F0 /* 3165-loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B946EA52381586400DFC3F0 /* 3165-loader.json */; };
+		0B946EAC23815DF600DFC3F0 /* model 2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0B946EAB23815DF500DFC3F0 /* model 2.mlmodel */; };
+		0B946EAE23815E1A00DFC3F0 /* model 2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0B946EAD23815E1A00DFC3F0 /* model 2.mlmodel */; };
+		0B946EB0238164C400DFC3F0 /* model 4.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0B946EAF238164C400DFC3F0 /* model 4.mlmodel */; };
+		0B946EB2238165AD00DFC3F0 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B946EB1238165AD00DFC3F0 /* QuizView.swift */; };
+		0B946EB4238166AD00DFC3F0 /* model 5.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0B946EB3238166AD00DFC3F0 /* model 5.mlmodel */; };
+		18E87F11EBC670B67028F6EA /* Pods_SignifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C94654463E85B71C18B1B4D9 /* Pods_SignifyUITests.framework */; };
+		4587C87EFD198A8021776A85 /* Pods_Signify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 082AC4E6B2D4CF0D5384C404 /* Pods_Signify.framework */; };
 		5DBF39482380F3FC00A5A695 /* Sesgoritma.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF39472380F3FC00A5A695 /* Sesgoritma.mlmodel */; };
-		5DD079E123810D61001820DC /* Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DD079E023810D61001820DC /* Model.mlmodel */; };
 		5DD079E3238112A9001820DC /* SignLanguageRecognizer.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DD079E2238112A8001820DC /* SignLanguageRecognizer.mlmodel */; };
 		5DD079E5238113E6001820DC /* Hand_Sign_Recognition_3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DD079E4238113E6001820DC /* Hand_Sign_Recognition_3.mlmodel */; };
 		5DD079E72381259B001820DC /* model3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DD079E62381259A001820DC /* model3.mlmodel */; };
@@ -39,6 +51,7 @@
 		5DFD3A882380CA3C002962EB /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A872380CA3C002962EB /* ViewRouter.swift */; };
 		5DFD3A8A2380CC0A002962EB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A892380CC0A002962EB /* RootView.swift */; };
 		5DFD3A8C2380EB92002962EB /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A8B2380EB92002962EB /* DictionaryView.swift */; };
+		77A6CD87C8C2EA4376DCAA76 /* Pods_SignifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F901355464D7EB9F3E3BE2D /* Pods_SignifyTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		082AC4E6B2D4CF0D5384C404 /* Pods_Signify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Signify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B635DED23807DCE006D115F /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		0B635DEF2380897A006D115F /* CameraViewUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewUIKit.swift; sourceTree = "<group>"; };
 		0B635DF323808E0F006D115F /* CameraViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewWrapper.swift; sourceTree = "<group>"; };
@@ -67,8 +81,21 @@
 		0B635DFB2380B66F006D115F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Signify/Views/BlurView.swift; sourceTree = SOURCE_ROOT; };
 		0B6B4A952380CCA800987D54 /* ObservableScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObservableScan.swift; path = Signify/Views/ObservableScan.swift; sourceTree = SOURCE_ROOT; };
 		0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		0B946E9E2381580F00DFC3F0 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = Signify/Views/LottieView.swift; sourceTree = SOURCE_ROOT; };
+		0B946EA12381586400DFC3F0 /* 448-ripple-loading-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "448-ripple-loading-animation.json"; sourceTree = "<group>"; };
+		0B946EA22381586400DFC3F0 /* 4222-camera-scanning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "4222-camera-scanning.json"; sourceTree = "<group>"; };
+		0B946EA32381586400DFC3F0 /* 1221-loader-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1221-loader-animation.json"; sourceTree = "<group>"; };
+		0B946EA42381586400DFC3F0 /* 7485-abstract-animation-for-apps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "7485-abstract-animation-for-apps.json"; sourceTree = "<group>"; };
+		0B946EA52381586400DFC3F0 /* 3165-loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "3165-loader.json"; sourceTree = "<group>"; };
+		0B946EAB23815DF500DFC3F0 /* model 2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "model 2.mlmodel"; sourceTree = "<group>"; };
+		0B946EAD23815E1A00DFC3F0 /* model 2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "model 2.mlmodel"; sourceTree = "<group>"; };
+		0B946EAF238164C400DFC3F0 /* model 4.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "model 4.mlmodel"; sourceTree = "<group>"; };
+		0B946EB1238165AD00DFC3F0 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		0B946EB3238166AD00DFC3F0 /* model 5.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "model 5.mlmodel"; sourceTree = "<group>"; };
+		25A3374F8C25644216B0B6F7 /* Pods-Signify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Signify.debug.xcconfig"; path = "Target Support Files/Pods-Signify/Pods-Signify.debug.xcconfig"; sourceTree = "<group>"; };
+		29D68448FE9111CF87AD5B80 /* Pods-SignifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignifyUITests.release.xcconfig"; path = "Target Support Files/Pods-SignifyUITests/Pods-SignifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4F901355464D7EB9F3E3BE2D /* Pods_SignifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBF39472380F3FC00A5A695 /* Sesgoritma.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Sesgoritma.mlmodel; sourceTree = "<group>"; };
-		5DD079E023810D61001820DC /* Model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Model.mlmodel; sourceTree = "<group>"; };
 		5DD079E2238112A8001820DC /* SignLanguageRecognizer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SignLanguageRecognizer.mlmodel; sourceTree = "<group>"; };
 		5DD079E4238113E6001820DC /* Hand_Sign_Recognition_3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Hand_Sign_Recognition_3.mlmodel; sourceTree = "<group>"; };
 		5DD079E62381259A001820DC /* model3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = model3.mlmodel; sourceTree = "<group>"; };
@@ -97,6 +124,11 @@
 		5DFD3A872380CA3C002962EB /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewRouter.swift; path = Signify/Views/ViewRouter.swift; sourceTree = SOURCE_ROOT; };
 		5DFD3A892380CC0A002962EB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		5DFD3A8B2380EB92002962EB /* DictionaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
+		83F641C42290910DD7F29C9A /* Pods-Signify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Signify.release.xcconfig"; path = "Target Support Files/Pods-Signify/Pods-Signify.release.xcconfig"; sourceTree = "<group>"; };
+		B36EA162425778D99859CEBE /* Pods-SignifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignifyTests.debug.xcconfig"; path = "Target Support Files/Pods-SignifyTests/Pods-SignifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C94654463E85B71C18B1B4D9 /* Pods_SignifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD558656FDB8EAD97E94DC2B /* Pods-SignifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignifyTests.release.xcconfig"; path = "Target Support Files/Pods-SignifyTests/Pods-SignifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		E69E037A74C8AF2C64D0866C /* Pods-SignifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignifyUITests.debug.xcconfig"; path = "Target Support Files/Pods-SignifyUITests/Pods-SignifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4587C87EFD198A8021776A85 /* Pods_Signify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A6CD87C8C2EA4376DCAA76 /* Pods_SignifyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,12 +152,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E87F11EBC670B67028F6EA /* Pods_SignifyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B946EA02381586400DFC3F0 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				0B946EA12381586400DFC3F0 /* 448-ripple-loading-animation.json */,
+				0B946EA22381586400DFC3F0 /* 4222-camera-scanning.json */,
+				0B946EA32381586400DFC3F0 /* 1221-loader-animation.json */,
+				0B946EA42381586400DFC3F0 /* 7485-abstract-animation-for-apps.json */,
+				0B946EA52381586400DFC3F0 /* 3165-loader.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		50EAB52838784A29CCEFE6AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				082AC4E6B2D4CF0D5384C404 /* Pods_Signify.framework */,
+				4F901355464D7EB9F3E3BE2D /* Pods_SignifyTests.framework */,
+				C94654463E85B71C18B1B4D9 /* Pods_SignifyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5DFD3A37238070F3002962EB = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +188,8 @@
 				5DFD3A59238070F8002962EB /* SignifyTests */,
 				5DFD3A64238070F8002962EB /* SignifyUITests */,
 				5DFD3A41238070F3002962EB /* Products */,
+				964F6313BD8C031462BD365E /* Pods */,
+				50EAB52838784A29CCEFE6AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,10 +212,14 @@
 				5DFD3A73238079F6002962EB /* Models */,
 				5DFD3A43238070F3002962EB /* AppDelegate.swift */,
 				5DFD3A45238070F3002962EB /* SceneDelegate.swift */,
+				0B946EAD23815E1A00DFC3F0 /* model 2.mlmodel */,
 				5DBF39472380F3FC00A5A695 /* Sesgoritma.mlmodel */,
-				5DD079E023810D61001820DC /* Model.mlmodel */,
+				0B946EAF238164C400DFC3F0 /* model 4.mlmodel */,
 				5DD079EA238147D0001820DC /* model4.mlmodel */,
+				0B946EB3238166AD00DFC3F0 /* model 5.mlmodel */,
+				0B946EA02381586400DFC3F0 /* Animations */,
 				5DD079EC23814B8F001820DC /* sign.mlmodel */,
+				0B946EAB23815DF500DFC3F0 /* model 2.mlmodel */,
 				5DD079E62381259A001820DC /* model3.mlmodel */,
 				5DD079E2238112A8001820DC /* SignLanguageRecognizer.mlmodel */,
 				5DD079E4238113E6001820DC /* Hand_Sign_Recognition_3.mlmodel */,
@@ -214,6 +277,7 @@
 				0B635DF323808E0F006D115F /* CameraViewWrapper.swift */,
 				0B635DF72380A0D8006D115F /* CameraControlLayerView.swift */,
 				0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */,
+				0B946EB1238165AD00DFC3F0 /* QuizView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,6 +290,7 @@
 				5DFD3A7F238087CF002962EB /* CameraBtn.swift */,
 				5DFD3A83238094E9002962EB /* SignLanguageCard.swift */,
 				0B635DFB2380B66F006D115F /* BlurView.swift */,
+				0B946E9E2381580F00DFC3F0 /* LottieView.swift */,
 			);
 			path = SupportViews;
 			sourceTree = "<group>";
@@ -240,6 +305,19 @@
 			path = Observables;
 			sourceTree = "<group>";
 		};
+		964F6313BD8C031462BD365E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25A3374F8C25644216B0B6F7 /* Pods-Signify.debug.xcconfig */,
+				83F641C42290910DD7F29C9A /* Pods-Signify.release.xcconfig */,
+				B36EA162425778D99859CEBE /* Pods-SignifyTests.debug.xcconfig */,
+				CD558656FDB8EAD97E94DC2B /* Pods-SignifyTests.release.xcconfig */,
+				E69E037A74C8AF2C64D0866C /* Pods-SignifyUITests.debug.xcconfig */,
+				29D68448FE9111CF87AD5B80 /* Pods-SignifyUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,9 +325,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DFD3A6A238070F8002962EB /* Build configuration list for PBXNativeTarget "Signify" */;
 			buildPhases = (
+				2B370E2C65758FDBEF0BA01E /* [CP] Check Pods Manifest.lock */,
 				5DFD3A3C238070F3002962EB /* Sources */,
 				5DFD3A3D238070F3002962EB /* Frameworks */,
 				5DFD3A3E238070F3002962EB /* Resources */,
+				9F11A89DD104EBF612CC00E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +344,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DFD3A6D238070F8002962EB /* Build configuration list for PBXNativeTarget "SignifyTests" */;
 			buildPhases = (
+				DFEB7E751FA25F1F9F0A9AEC /* [CP] Check Pods Manifest.lock */,
 				5DFD3A52238070F8002962EB /* Sources */,
 				5DFD3A53238070F8002962EB /* Frameworks */,
 				5DFD3A54238070F8002962EB /* Resources */,
@@ -282,6 +363,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DFD3A70238070F8002962EB /* Build configuration list for PBXNativeTarget "SignifyUITests" */;
 			buildPhases = (
+				13D89F95E911E404F1399C94 /* [CP] Check Pods Manifest.lock */,
 				5DFD3A5D238070F8002962EB /* Sources */,
 				5DFD3A5E238070F8002962EB /* Frameworks */,
 				5DFD3A5F238070F8002962EB /* Resources */,
@@ -344,9 +426,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B946EA72381586400DFC3F0 /* 4222-camera-scanning.json in Resources */,
 				5DFD3A50238070F8002962EB /* LaunchScreen.storyboard in Resources */,
 				5DFD3A4D238070F8002962EB /* Preview Assets.xcassets in Resources */,
+				0B946EAA2381586400DFC3F0 /* 3165-loader.json in Resources */,
+				0B946EA62381586400DFC3F0 /* 448-ripple-loading-animation.json in Resources */,
 				5DFD3A4A238070F8002962EB /* Assets.xcassets in Resources */,
+				0B946EA92381586400DFC3F0 /* 7485-abstract-animation-for-apps.json in Resources */,
+				0B946EA82381586400DFC3F0 /* 1221-loader-animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,12 +453,100 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		13D89F95E911E404F1399C94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SignifyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B370E2C65758FDBEF0BA01E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Signify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F11A89DD104EBF612CC00E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Signify/Pods-Signify-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Signify/Pods-Signify-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Signify/Pods-Signify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFEB7E751FA25F1F9F0A9AEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SignifyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5DFD3A3C238070F3002962EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B946EAC23815DF600DFC3F0 /* model 2.mlmodel in Sources */,
 				5DFD3A84238094E9002962EB /* SignLanguageCard.swift in Sources */,
+				0B946EB2238165AD00DFC3F0 /* QuizView.swift in Sources */,
 				5DFD3A7C238087BB002962EB /* NavigationBtn.swift in Sources */,
 				5DFD3A7823807D22002962EB /* TranslatorView.swift in Sources */,
 				5DFD3A44238070F3002962EB /* AppDelegate.swift in Sources */,
@@ -380,7 +555,9 @@
 				5DD079ED23814B8F001820DC /* sign.mlmodel in Sources */,
 				5DFD3A882380CA3C002962EB /* ViewRouter.swift in Sources */,
 				5DD079E5238113E6001820DC /* Hand_Sign_Recognition_3.mlmodel in Sources */,
+				0B946EAE23815E1A00DFC3F0 /* model 2.mlmodel in Sources */,
 				5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */,
+				0B946EB0238164C400DFC3F0 /* model 4.mlmodel in Sources */,
 				5DFD3A822380881D002962EB /* TextFieldObservable.swift in Sources */,
 				5DFD3A48238070F3002962EB /* CameraView.swift in Sources */,
 				5DFD3A80238087CF002962EB /* CameraBtn.swift in Sources */,
@@ -388,12 +565,13 @@
 				0B635DF82380A0D8006D115F /* CameraControlLayerView.swift in Sources */,
 				0B6B4A982380D9FD00987D54 /* SwiftUIView.swift in Sources */,
 				5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */,
-				5DD079E123810D61001820DC /* Model.mlmodel in Sources */,
+				0B946E9F2381580F00DFC3F0 /* LottieView.swift in Sources */,
 				0B635DF02380897A006D115F /* CameraViewUIKit.swift in Sources */,
 				5DBF39482380F3FC00A5A695 /* Sesgoritma.mlmodel in Sources */,
 				5DFD3A48238070F3002962EB /* CameraView.swift in Sources */,
 				0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */,
 				5DFD3A8C2380EB92002962EB /* DictionaryView.swift in Sources */,
+				0B946EB4238166AD00DFC3F0 /* model 5.mlmodel in Sources */,
 				0B635DF623809A33006D115F /* Alphabet.swift in Sources */,
 				5DD079E3238112A9001820DC /* SignLanguageRecognizer.mlmodel in Sources */,
 				0B635DFC2380B66F006D115F /* BlurView.swift in Sources */,
@@ -562,18 +740,19 @@
 		};
 		5DFD3A6B238070F8002962EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25A3374F8C25644216B0B6F7 /* Pods-Signify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signify/Preview Content\"";
-				DEVELOPMENT_TEAM = 39DZ4HK4MS;
+				DEVELOPMENT_TEAM = 6C75DBD4UC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.manduSignify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalin.Signify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -582,18 +761,19 @@
 		};
 		5DFD3A6C238070F8002962EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83F641C42290910DD7F29C9A /* Pods-Signify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signify/Preview Content\"";
-				DEVELOPMENT_TEAM = 39DZ4HK4MS;
+				DEVELOPMENT_TEAM = 6C75DBD4UC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.manduSignify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.catalin.Signi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -602,6 +782,7 @@
 		};
 		5DFD3A6E238070F8002962EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B36EA162425778D99859CEBE /* Pods-SignifyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -624,6 +805,7 @@
 		};
 		5DFD3A6F238070F8002962EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD558656FDB8EAD97E94DC2B /* Pods-SignifyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -646,6 +828,7 @@
 		};
 		5DFD3A71238070F8002962EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E69E037A74C8AF2C64D0866C /* Pods-SignifyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -666,6 +849,7 @@
 		};
 		5DFD3A72238070F8002962EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29D68448FE9111CF87AD5B80 /* Pods-SignifyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -22,7 +22,7 @@ struct TranslatorView: View {
                 .bold()
                 .foregroundColor(.white).animation(nil)
         }.frame(minWidth: 0, maxWidth: .infinity).padding().background(Color("greenishBlue"))
-        .cornerRadius(10)
+            .cornerRadius(10)
         
     }
     
@@ -33,28 +33,28 @@ struct TranslatorView: View {
                 Text("Translate Text to ").bold().font(.title)
                 Text("Sign Language").bold().font(.title)
             }.padding(.top, 25).frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-
+            
             CustomTextField(textFieldObsver: textFieldObsver, iconName: "textformat.size")
             if self.textFieldObsver.filteredText.count > 0 {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .center){
                         ForEach(self.textFieldObsver.filteredText, id: \.self) { letter in
                             SignLanguageCard(letter: letter)
-                         }
+                        }
                     }
                 }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity).padding().font(.caption).transition(.opacity)
             }
             else{
-                Text("Type something....")
+                LottieView(fileName: "1221-loader-animation")
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                    .background(Color.white).opacity(0.7)
+                    .background(Color.white)
             }
             
             translateBnt.padding(.bottom, 100)
                 .opacity((self.textFieldObsver.text.count  > 0 && self.textFieldObsver.editing) ? 1 : 0)
-
+            
         }
-        .padding().frame(minWidth: 0, maxWidth: .infinity)//.background(Color.yellow.opacity(0.1))
-
+            .padding().frame(minWidth: 0, maxWidth: .infinity)//.background(Color.yellow.opacity(0.1))
+        
     }
 }

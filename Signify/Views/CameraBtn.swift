@@ -21,7 +21,7 @@ struct CameraBtn: View {
                 }
             }
         }){
-            Text("✌🏻").font(.system(size: 80))
+            Text("✌🏻").font(.system(size: 45))
         }
     }
 }

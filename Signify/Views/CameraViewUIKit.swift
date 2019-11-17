@@ -176,6 +176,7 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
         if self.observableScan.counter > 0 { return }
 
         DispatchQueue.main.async {
+           
             self.observableScan.counter = 5
         }
         /* Create a Core ML Vision request
@@ -195,7 +196,7 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
             /* Results array holds predictions iwth decreasing level of confidence.
              Thus we choose the first one with highest confidence. */
             guard let firstResult = results.first else { return }
-            print(firstResult.identifier)
+            
             var predictionString = ""
             
             /* Depending on the identifier we set the UILabel text with it's confidence.

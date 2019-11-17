@@ -16,7 +16,7 @@ var image: UIImage? = nil
 final class ObservableScan: ObservableObject {
     
     @Published var sequence:Array<Character> = []
-    @Published var letter:String = "Nothing..."
+    @Published var letter:String = "_"
     @Published var confidence:Float  = 0.0
     @Published var sample: [String] = []
     @Published var counter = 5

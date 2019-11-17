@@ -11,15 +11,16 @@ import SwiftUI
 struct RootView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @ObservedObject var textFieldObsver = TextFieldObservable()
+    @ObservedObject var scanData = ObservableScan()
     @State var offset: CGFloat = .zero
     @State var index = 2
     
     var navigation: some View {
-        HStack{
+        HStack(alignment: .top){
             NavigationBtn(offset: self.$offset, index: 1, current: self.$index
                 , selected: self.index == 1 ? true : false, iconName: "book.fill", name: "Dictionary")
             Spacer()
-            CameraBtn(offset: self.$offset, index: 2, current: self.$index)
+            CameraBtn(offset: self.$offset, index: 2, current: self.$index).offset(x: 0, y:-15)
             Spacer()
             NavigationBtn(offset: self.$offset, index: 3, current: self.$index
                 , selected: self.index == 3 ? true : false, iconName: "textformat.size", name: "Translate")
@@ -32,7 +33,7 @@ struct RootView: View {
             .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.height)
                 .offset(x: self.offset - UIScreen.main.bounds.width, y: 0)
 
-            CameraView()
+            CameraView(scanData: scanData)
                 .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.height)
                 .offset(x: self.offset, y: 0)
             TranslatorView(textFieldObsver: self.textFieldObsver)

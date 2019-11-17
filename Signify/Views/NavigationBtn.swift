@@ -15,8 +15,8 @@ struct NavigationBtn: View {
     @Binding var current: Int
     var selected = false
     var iconName = "book.fill"
-    var height: CGFloat = 30
-    var width: CGFloat = 36
+    var height: CGFloat = 25
+    var width: CGFloat = 29
     var name = "Name"
     
     var body: some View {
@@ -39,8 +39,9 @@ struct NavigationBtn: View {
             VStack(spacing: 5){
                 Image(systemName: iconName).resizable()
                     .frame(width: width, height: height)
-                .foregroundColor(.black)
-                Text(name).bold().foregroundColor(.black)
+                    .foregroundColor(self.current  == 2 ? .white : .black)
+                Text(name)
+                    .font(.caption).fontWeight(.bold).foregroundColor(self.current  == 2 ? .white : .black)
                 RoundedRectangle(cornerRadius: 5)
                     .foregroundColor(Color("greenishBlue"))
                     .frame(minWidth: 0, maxWidth: 70, minHeight: 0, maxHeight: 5)
