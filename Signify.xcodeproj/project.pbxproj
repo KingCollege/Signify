@@ -12,10 +12,11 @@
 		0B635DF423808E0F006D115F /* CameraViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF323808E0F006D115F /* CameraViewWrapper.swift */; };
 		0B635DF623809A33006D115F /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF523809A33006D115F /* Alphabet.swift */; };
 		0B635DF82380A0D8006D115F /* CameraControlLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF72380A0D8006D115F /* CameraControlLayerView.swift */; };
-		0B635DFA2380A3DD006D115F /* Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF92380A3DD006D115F /* Model.mlmodel */; };
+		0B635DFA2380A3DD006D115F /* Model_1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF92380A3DD006D115F /* Model_1.mlmodel */; };
 		0B635DFC2380B66F006D115F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DFB2380B66F006D115F /* BlurView.swift */; };
 		0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A952380CCA800987D54 /* ObservableScan.swift */; };
 		0B6B4A982380D9FD00987D54 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */; };
+		0B6B4A9A2381006D00987D54 /* Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A992381006D00987D54 /* Model.mlmodel */; };
 		5DFD3A44238070F3002962EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A43238070F3002962EB /* AppDelegate.swift */; };
 		5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A45238070F3002962EB /* SceneDelegate.swift */; };
 		5DFD3A48238070F3002962EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A47238070F3002962EB /* ContentView.swift */; };
@@ -49,10 +50,11 @@
 		0B635DF323808E0F006D115F /* CameraViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewWrapper.swift; sourceTree = "<group>"; };
 		0B635DF523809A33006D115F /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alphabet.swift; path = Signify/Views/Alphabet.swift; sourceTree = SOURCE_ROOT; };
 		0B635DF72380A0D8006D115F /* CameraControlLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlLayerView.swift; sourceTree = "<group>"; };
-		0B635DF92380A3DD006D115F /* Model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Model.mlmodel; path = ../../../Downloads/35aefd9aa23d4ff0824259f39b9e3096.CoreML/Model.mlmodel; sourceTree = "<group>"; };
+		0B635DF92380A3DD006D115F /* Model_1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Model_1.mlmodel; path = ../../../Downloads/35aefd9aa23d4ff0824259f39b9e3096.CoreML/Model_1.mlmodel; sourceTree = "<group>"; };
 		0B635DFB2380B66F006D115F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Signify/Views/BlurView.swift; sourceTree = SOURCE_ROOT; };
 		0B6B4A952380CCA800987D54 /* ObservableScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObservableScan.swift; path = Signify/Views/ObservableScan.swift; sourceTree = SOURCE_ROOT; };
 		0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		0B6B4A992381006D00987D54 /* Model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Model.mlmodel; sourceTree = SOURCE_ROOT; };
 		5DFD3A40238070F3002962EB /* Signify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFD3A43238070F3002962EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DFD3A45238070F3002962EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +127,8 @@
 				5DFD3A45238070F3002962EB /* SceneDelegate.swift */,
 				5DFD3A49238070F8002962EB /* Assets.xcassets */,
 				5DFD3A4E238070F8002962EB /* LaunchScreen.storyboard */,
-				0B635DF92380A3DD006D115F /* Model.mlmodel */,
+				0B6B4A992381006D00987D54 /* Model.mlmodel */,
+				0B635DF92380A3DD006D115F /* Model_1.mlmodel */,
 				5DFD3A51238070F8002962EB /* Info.plist */,
 				5DFD3A4B238070F8002962EB /* Preview Content */,
 			);
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DFD3A44238070F3002962EB /* AppDelegate.swift in Sources */,
+				0B6B4A9A2381006D00987D54 /* Model.mlmodel in Sources */,
 				0B635DF82380A0D8006D115F /* CameraControlLayerView.swift in Sources */,
 				0B6B4A982380D9FD00987D54 /* SwiftUIView.swift in Sources */,
 				5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */,
@@ -334,7 +338,7 @@
 				5DFD3A48238070F3002962EB /* ContentView.swift in Sources */,
 				0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */,
 				0B635DF623809A33006D115F /* Alphabet.swift in Sources */,
-				0B635DFA2380A3DD006D115F /* Model.mlmodel in Sources */,
+				0B635DFA2380A3DD006D115F /* Model_1.mlmodel in Sources */,
 				0B635DFC2380B66F006D115F /* BlurView.swift in Sources */,
 				0B635DEE23807DCE006D115F /* CameraViewController.swift in Sources */,
 				0B635DF423808E0F006D115F /* CameraViewWrapper.swift in Sources */,

@@ -84,7 +84,10 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
+
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else
+//         guard let pixelBuffer : CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else
+        
         {
             return
         }
@@ -182,9 +185,21 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
         /* Perform the above request using Vision Image Request Handler
          We input our CVPixelbuffer to this handler along with the request declared above.
          */
-        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+        try? VNImageRequestHandler(cvPixelBuffer: self.resize(pixelBuffer: pixelBuffer)!, options: [:]).perform([request])
         
         
+    }
+    
+    func resize(pixelBuffer: CVPixelBuffer) -> CVPixelBuffer? {
+      let imageSize = 224
+      var ciImage = CIImage(cvPixelBuffer: pixelBuffer, options: nil)
+      let transform = CGAffineTransform(scaleX: CGFloat(imageSize) / CGFloat(CVPixelBufferGetWidth(pixelBuffer)), y: CGFloat(imageSize) / CGFloat(CVPixelBufferGetHeight(pixelBuffer)))
+      ciImage = ciImage.transformed(by: transform).cropped(to: CGRect(x: 0, y: 0, width: imageSize, height: imageSize))
+      let ciContext = CIContext()
+      var resizeBuffer: CVPixelBuffer?
+      CVPixelBufferCreate(kCFAllocatorDefault, imageSize, imageSize, CVPixelBufferGetPixelFormatType(pixelBuffer), nil, &resizeBuffer)
+      ciContext.render(ciImage, to: resizeBuffer!)
+      return resizeBuffer
     }
 }
 
