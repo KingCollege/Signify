@@ -15,6 +15,14 @@
 		5DFD3A50238070F8002962EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFD3A4E238070F8002962EB /* LaunchScreen.storyboard */; };
 		5DFD3A5B238070F8002962EB /* SignifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A5A238070F8002962EB /* SignifyTests.swift */; };
 		5DFD3A66238070F8002962EB /* SignifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A65238070F8002962EB /* SignifyUITests.swift */; };
+		5DFD3A7823807D22002962EB /* TranslatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A7723807D22002962EB /* TranslatorView.swift */; };
+		5DFD3A7A238087AB002962EB /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A79238087AB002962EB /* CustomTextField.swift */; };
+		5DFD3A7C238087BB002962EB /* NavigationBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A7B238087BB002962EB /* NavigationBtn.swift */; };
+		5DFD3A80238087CF002962EB /* CameraBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A7F238087CF002962EB /* CameraBtn.swift */; };
+		5DFD3A822380881D002962EB /* TextFieldObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A812380881D002962EB /* TextFieldObservable.swift */; };
+		5DFD3A84238094E9002962EB /* SignLanguageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A83238094E9002962EB /* SignLanguageCard.swift */; };
+		5DFD3A882380CA3C002962EB /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A872380CA3C002962EB /* ViewRouter.swift */; };
+		5DFD3A8A2380CC0A002962EB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A892380CC0A002962EB /* RootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		5DFD3A61238070F8002962EB /* SignifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFD3A65238070F8002962EB /* SignifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignifyUITests.swift; sourceTree = "<group>"; };
 		5DFD3A67238070F8002962EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DFD3A7723807D22002962EB /* TranslatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorView.swift; sourceTree = "<group>"; };
+		5DFD3A79238087AB002962EB /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = Signify/Views/CustomTextField.swift; sourceTree = SOURCE_ROOT; };
+		5DFD3A7B238087BB002962EB /* NavigationBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBtn.swift; path = Signify/Views/NavigationBtn.swift; sourceTree = SOURCE_ROOT; };
+		5DFD3A7F238087CF002962EB /* CameraBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraBtn.swift; path = Signify/Views/CameraBtn.swift; sourceTree = SOURCE_ROOT; };
+		5DFD3A812380881D002962EB /* TextFieldObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextFieldObservable.swift; path = Signify/Views/TextFieldObservable.swift; sourceTree = SOURCE_ROOT; };
+		5DFD3A83238094E9002962EB /* SignLanguageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignLanguageCard.swift; path = Signify/Views/SignLanguageCard.swift; sourceTree = SOURCE_ROOT; };
+		5DFD3A872380CA3C002962EB /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewRouter.swift; path = Signify/Views/ViewRouter.swift; sourceTree = SOURCE_ROOT; };
+		5DFD3A892380CC0A002962EB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				5DFD3A47238070F3002962EB /* ContentView.swift */,
+				5DFD3A7723807D22002962EB /* TranslatorView.swift */,
+				5DFD3A892380CC0A002962EB /* RootView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +175,10 @@
 		5DFD3A7523807A12002962EB /* SupportViews */ = {
 			isa = PBXGroup;
 			children = (
+				5DFD3A79238087AB002962EB /* CustomTextField.swift */,
+				5DFD3A7B238087BB002962EB /* NavigationBtn.swift */,
+				5DFD3A7F238087CF002962EB /* CameraBtn.swift */,
+				5DFD3A83238094E9002962EB /* SignLanguageCard.swift */,
 			);
 			path = SupportViews;
 			sourceTree = "<group>";
@@ -164,6 +186,8 @@
 		5DFD3A7623807A17002962EB /* Observables */ = {
 			isa = PBXGroup;
 			children = (
+				5DFD3A812380881D002962EB /* TextFieldObservable.swift */,
+				5DFD3A872380CA3C002962EB /* ViewRouter.swift */,
 			);
 			path = Observables;
 			sourceTree = "<group>";
@@ -299,9 +323,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DFD3A84238094E9002962EB /* SignLanguageCard.swift in Sources */,
+				5DFD3A7C238087BB002962EB /* NavigationBtn.swift in Sources */,
+				5DFD3A7823807D22002962EB /* TranslatorView.swift in Sources */,
 				5DFD3A44238070F3002962EB /* AppDelegate.swift in Sources */,
+				5DFD3A7A238087AB002962EB /* CustomTextField.swift in Sources */,
+				5DFD3A882380CA3C002962EB /* ViewRouter.swift in Sources */,
 				5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */,
+				5DFD3A822380881D002962EB /* TextFieldObservable.swift in Sources */,
 				5DFD3A48238070F3002962EB /* ContentView.swift in Sources */,
+				5DFD3A80238087CF002962EB /* CameraBtn.swift in Sources */,
+				5DFD3A8A2380CC0A002962EB /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
