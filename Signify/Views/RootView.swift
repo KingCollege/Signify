@@ -16,17 +16,17 @@ struct RootView: View {
     
     var navigation: some View {
         HStack{
-            NavigationBtn(selected: false, iconName: "book.fill", name: "Dictionary")
+            NavigationBtn(selected: self.index == 1 ? true : false, iconName: "book.fill", name: "Dictionary")
             Spacer()
             CameraBtn()
             Spacer()
-            NavigationBtn(selected: true, iconName: "textformat.size", name: "Translate")
+            NavigationBtn(selected: self.index == 3 ? true : false, iconName: "textformat.size", name: "Translate")
         }
     }
     
     var body: some View {
        ZStack{
-            CameraView()
+            DictionaryView()
             .frame(width: UIScreen.main.bounds.width, height:  UIScreen.main.bounds.height)
                 .offset(x: self.offset - UIScreen.main.bounds.width, y: 0)
 

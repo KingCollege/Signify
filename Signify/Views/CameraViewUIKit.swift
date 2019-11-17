@@ -173,6 +173,7 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
                     break
                 }
                 
+                print(predictionString)
                self.observableScan.letter = predictionString
                self.observableScan.confidence = firstResult.confidence
                 

@@ -23,8 +23,9 @@ struct NavigationBtn: View {
                 .foregroundColor(.black)
                 Text(name).bold().foregroundColor(.black)
                 RoundedRectangle(cornerRadius: 5)
-                    .foregroundColor(selected ? Color("greenishBlue") : Color.white)
+                    .foregroundColor(Color("greenishBlue"))
                     .frame(minWidth: 0, maxWidth: 70, minHeight: 0, maxHeight: 5)
+                    .opacity(selected ? 1 : 0)
 
             }
 

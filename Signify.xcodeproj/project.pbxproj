@@ -12,7 +12,6 @@
 		0B635DF423808E0F006D115F /* CameraViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF323808E0F006D115F /* CameraViewWrapper.swift */; };
 		0B635DF623809A33006D115F /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF523809A33006D115F /* Alphabet.swift */; };
 		0B635DF82380A0D8006D115F /* CameraControlLayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF72380A0D8006D115F /* CameraControlLayerView.swift */; };
-		0B635DFA2380A3DD006D115F /* Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DF92380A3DD006D115F /* Model.mlmodel */; };
 		0B635DFC2380B66F006D115F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B635DFB2380B66F006D115F /* BlurView.swift */; };
 		0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A952380CCA800987D54 /* ObservableScan.swift */; };
 		0B6B4A982380D9FD00987D54 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */; };
@@ -32,6 +31,8 @@
 		5DFD3A84238094E9002962EB /* SignLanguageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A83238094E9002962EB /* SignLanguageCard.swift */; };
 		5DFD3A882380CA3C002962EB /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A872380CA3C002962EB /* ViewRouter.swift */; };
 		5DFD3A8A2380CC0A002962EB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A892380CC0A002962EB /* RootView.swift */; };
+		5DFD3A8C2380EB92002962EB /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A8B2380EB92002962EB /* DictionaryView.swift */; };
+		5DFD3A8E2380EC0C002962EB /* Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A8D2380EC0C002962EB /* Model.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +58,6 @@
 		0B635DF323808E0F006D115F /* CameraViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewWrapper.swift; sourceTree = "<group>"; };
 		0B635DF523809A33006D115F /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Alphabet.swift; path = Signify/Views/Alphabet.swift; sourceTree = SOURCE_ROOT; };
 		0B635DF72380A0D8006D115F /* CameraControlLayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraControlLayerView.swift; sourceTree = "<group>"; };
-		0B635DF92380A3DD006D115F /* Model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Model.mlmodel; path = ../../../Downloads/35aefd9aa23d4ff0824259f39b9e3096.CoreML/Model.mlmodel; sourceTree = "<group>"; };
 		0B635DFB2380B66F006D115F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Signify/Views/BlurView.swift; sourceTree = SOURCE_ROOT; };
 		0B6B4A952380CCA800987D54 /* ObservableScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObservableScan.swift; path = Signify/Views/ObservableScan.swift; sourceTree = SOURCE_ROOT; };
 		0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
@@ -83,6 +83,8 @@
 		5DFD3A83238094E9002962EB /* SignLanguageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignLanguageCard.swift; path = Signify/Views/SignLanguageCard.swift; sourceTree = SOURCE_ROOT; };
 		5DFD3A872380CA3C002962EB /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewRouter.swift; path = Signify/Views/ViewRouter.swift; sourceTree = SOURCE_ROOT; };
 		5DFD3A892380CC0A002962EB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		5DFD3A8B2380EB92002962EB /* DictionaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
+		5DFD3A8D2380EC0C002962EB /* Model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Model.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,9 +141,9 @@
 				5DFD3A73238079F6002962EB /* Models */,
 				5DFD3A43238070F3002962EB /* AppDelegate.swift */,
 				5DFD3A45238070F3002962EB /* SceneDelegate.swift */,
+				5DFD3A8D2380EC0C002962EB /* Model.mlmodel */,
 				5DFD3A49238070F8002962EB /* Assets.xcassets */,
 				5DFD3A4E238070F8002962EB /* LaunchScreen.storyboard */,
-				0B635DF92380A3DD006D115F /* Model.mlmodel */,
 				5DFD3A51238070F8002962EB /* Info.plist */,
 				5DFD3A4B238070F8002962EB /* Preview Content */,
 			);
@@ -185,6 +187,7 @@
 		5DFD3A74238079FF002962EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5DFD3A8B2380EB92002962EB /* DictionaryView.swift */,
 				5DFD3A47238070F3002962EB /* CameraView.swift */,
 				5DFD3A7723807D22002962EB /* TranslatorView.swift */,
 				5DFD3A892380CC0A002962EB /* RootView.swift */,
@@ -364,11 +367,12 @@
 				0B635DF82380A0D8006D115F /* CameraControlLayerView.swift in Sources */,
 				0B6B4A982380D9FD00987D54 /* SwiftUIView.swift in Sources */,
 				5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */,
+				5DFD3A8E2380EC0C002962EB /* Model.mlmodel in Sources */,
 				0B635DF02380897A006D115F /* CameraViewUIKit.swift in Sources */,
 				5DFD3A48238070F3002962EB /* CameraView.swift in Sources */,
 				0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */,
+				5DFD3A8C2380EB92002962EB /* DictionaryView.swift in Sources */,
 				0B635DF623809A33006D115F /* Alphabet.swift in Sources */,
-				0B635DFA2380A3DD006D115F /* Model.mlmodel in Sources */,
 				0B635DFC2380B66F006D115F /* BlurView.swift in Sources */,
 				0B635DEE23807DCE006D115F /* CameraViewController.swift in Sources */,
 				0B635DF423808E0F006D115F /* CameraViewWrapper.swift in Sources */,
@@ -538,14 +542,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signify/Preview Content\"";
-				DEVELOPMENT_TEAM = 6C75DBD4UC;
+				DEVELOPMENT_TEAM = 39DZ4HK4MS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.catalin.Signify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manduSignify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -558,14 +562,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Signify/Preview Content\"";
-				DEVELOPMENT_TEAM = 6C75DBD4UC;
+				DEVELOPMENT_TEAM = 39DZ4HK4MS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Signify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.catalin.Signify;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manduSignify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
