@@ -3,10 +3,49 @@ import AVFoundation
 import Vision
 import Combine
 import SwiftUI
+import VideoToolbox
 
 protocol CameraViewDelegate: class {
     func cameraViewDidFoundSign(frame: CGRect)
     func cameraViewFoundNoSign()
+}
+
+
+extension UIImage {
+    public convenience init?(pixelBuffer: CVPixelBuffer) {
+        var cgImage: CGImage?
+        VTCreateCGImageFromCVPixelBuffer(pixelBuffer, options: nil, imageOut: &cgImage)
+        
+        if let cgImage = cgImage {
+            self.init(cgImage: cgImage)
+        } else {
+            return nil
+        }
+    }
+}
+
+extension UIImage {
+    func rotate(radians: Float) -> UIImage? {
+        var newSize = CGRect(origin: CGPoint.zero, size: self.size).applying(CGAffineTransform(rotationAngle: CGFloat(radians))).size
+        // Trim off the extremely small float value to prevent core graphics from rounding it up
+        newSize.width = floor(newSize.width)
+        newSize.height = floor(newSize.height)
+
+        UIGraphicsBeginImageContextWithOptions(newSize, false, self.scale)
+        let context = UIGraphicsGetCurrentContext()!
+
+        // Move origin to middle
+        context.translateBy(x: newSize.width/2, y: newSize.height/2)
+        // Rotate around middle
+        context.rotate(by: CGFloat(radians))
+        // Draw the image at its center
+        self.draw(in: CGRect(x: -self.size.width/2, y: -self.size.height/2, width: self.size.width, height: self.size.height))
+
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage
+    }
 }
 
 final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegate{
@@ -82,24 +121,62 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
         captureSession?.stopRunning()
     }
     
+    func buffer(from image: UIImage? ) -> CVPixelBuffer? {
+        if let image = image {
+            let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
+            var pixelBuffer : CVPixelBuffer?
+            let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(image.size.width), Int(image.size.height), kCVPixelFormatType_32ARGB, attrs, &pixelBuffer)
+            guard (status == kCVReturnSuccess) else {
+              return nil
+            }
+
+            CVPixelBufferLockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+            let pixelData = CVPixelBufferGetBaseAddress(pixelBuffer!)
+
+            let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+            let context = CGContext(data: pixelData, width: Int(image.size.width), height: Int(image.size.height), bitsPerComponent: 8, bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!), space: rgbColorSpace, bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
+
+            context?.translateBy(x: 0, y: image.size.height)
+            context?.scaleBy(x: 1.0, y: -1.0)
+
+            UIGraphicsPushContext(context!)
+            image.draw(in: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+            UIGraphicsPopContext()
+            CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
+
+            return pixelBuffer
+        }
+        return nil
+
+    }
+    
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
-        guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else
+        
+        //guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else
+        guard var pixelBuffer1 : CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else
+
         {
             return
         }
         
+        image = UIImage(pixelBuffer: self.resize(pixelBuffer: pixelBuffer1)!)
+        image = image?.rotate(radians: .pi/2)
         
         
+        
+        guard let pixelBuffer = buffer(from: image) else {return }
+        let ciImage = CIImage(cvPixelBuffer: pixelBuffer)
         /* Initialise Core ML model
          We create a model container to be used with VNCoreMLRequest based on our HandSigns Core ML model.
          */
-        guard let handSignsModel = try? VNCoreMLModel(for: Model().model) else { return }
+        guard let handSignsModel = try? VNCoreMLModel(for: sign().model) else { return }
+    
         
         if self.observableScan.counter > 0 { return }
-        
+
         DispatchQueue.main.async {
-            self.observableScan.counter = 10
+            self.observableScan.counter = 5
         }
         /* Create a Core ML Vision request
          The completion block will execute when the request finishes execution and fetches a response.
@@ -111,13 +188,14 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
              identifier
              confidence - The confidence on the prediction made by the model on a scale of 0 to 1
              */
-            guard let results = finishedRequest.results as? [VNClassificationObservation] else { return }
             
+            
+            guard let results = finishedRequest.results as? [VNClassificationObservation] else { return }
+            //print(results)
             /* Results array holds predictions iwth decreasing level of confidence.
              Thus we choose the first one with highest confidence. */
             guard let firstResult = results.first else { return }
-            print(firstResult)
-            
+            print(firstResult.identifier)
             var predictionString = ""
             
             /* Depending on the identifier we set the UILabel text with it's confidence.
@@ -151,7 +229,7 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
                 case Alphabet.M.rawValue:
                     predictionString = "M"
                 case Alphabet.N.rawValue:
-                predictionString = "N"
+                    predictionString = "N"
                 case Alphabet.O.rawValue:
                     predictionString = "O"
                 case Alphabet.P.rawValue:
@@ -180,29 +258,30 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
                     predictionString = ""
                 }
                 
-                if predictionString != "Null" {
+                let arrayOfText: [String] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+                if arrayOfText.contains(predictionString){
                     self.observableScan.letter = predictionString
                     
                     self.observableScan.sequence.append(Character(predictionString))
                 }
                 
-//                if self.observableScan.sample.count <= 20 {
-//                    self.observableScan.sample.append(predictionString)
-//                }else{
-//                    var counts = [0 , 0, 0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0 ]
-//                    let arrayOfText: [String] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-//                    for i in self.observableScan.sample {
-//                        guard let letterIndex: Int = arrayOfText.firstIndex(of: i) else {continue}
-//                        counts[letterIndex] += 1
-//                    }
-//                    let index: Int = counts.firstIndex(of: counts.max()!)!
-//                    self.observableScan.letter = arrayOfText[index]
-//
-//                    self.observableScan.sequence.append(Character(arrayOfText[index]))
-//                    //self.observableScan.confidence = firstResult.confidence
-//                    self.observableScan.sample = []
-//
-//                }
+                //                if self.observableScan.sample.count <= 20 {
+                //                    self.observableScan.sample.append(predictionString)
+                //                }else{
+                //                    var counts = [0 , 0, 0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0,0 ,0 ]
+                //                    let arrayOfText: [String] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+                //                    for i in self.observableScan.sample {
+                //                        guard let letterIndex: Int = arrayOfText.firstIndex(of: i) else {continue}
+                //                        counts[letterIndex] += 1
+                //                    }
+                //                    let index: Int = counts.firstIndex(of: counts.max()!)!
+                //                    self.observableScan.letter = arrayOfText[index]
+                //
+                //                    self.observableScan.sequence.append(Character(arrayOfText[index]))
+                //                    //self.observableScan.confidence = firstResult.confidence
+                //                    self.observableScan.sample = []
+                //
+                //                }
                 
             }
             
@@ -211,8 +290,55 @@ final class CameraViewUIKit: UIView, AVCaptureVideoDataOutputSampleBufferDelegat
          We input our CVPixelbuffer to this handler along with the request declared above.
          */
         try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+
+        //try? VNImageRequestHandler(ciImage: ciImage, orientation: .up, options: [VNImageOption.cameraIntrinsics:true]).perform([request])
         
         
+    }
+    
+    func resize(pixelBuffer: CVPixelBuffer) -> CVPixelBuffer? {
+        let imageSize = 224
+        
+        
+        var ciImage = CIImage(cvPixelBuffer: pixelBuffer, options: [CIImageOption.applyOrientationProperty: true])
+        let transform = CGAffineTransform(scaleX: 70 / CGFloat(CVPixelBufferGetWidth(pixelBuffer)), y: 70 / CGFloat(CVPixelBufferGetHeight(pixelBuffer)))
+        ciImage = ciImage.transformed(by: transform)//.cropped(to: CGRect(x: 0, y: 0, width: imageSize, height: imageSize))
+        
+        let ciContext = CIContext()
+        var resizeBuffer: CVPixelBuffer?
+        CVPixelBufferCreate(kCFAllocatorDefault, imageSize, imageSize, CVPixelBufferGetPixelFormatType(pixelBuffer), nil, &resizeBuffer)
+        ciContext.render(ciImage, to: resizeBuffer!)
+        return resizeBuffer
+    }
+}
+
+
+extension CGImagePropertyOrientation {
+    init(_ uiOrientation: UIImage.Orientation) {
+        switch uiOrientation {
+        case .up: self = .up
+        case .upMirrored: self = .upMirrored
+        case .down: self = .down
+        case .downMirrored: self = .downMirrored
+        case .left: self = .left
+        case .leftMirrored: self = .leftMirrored
+        case .right: self = .right
+        case .rightMirrored: self = .rightMirrored
+        }
+    }
+}
+extension UIImage.Orientation {
+    init(_ cgOrientation: UIImage.Orientation) {
+        switch cgOrientation {
+        case .up: self = .up
+        case .upMirrored: self = .upMirrored
+        case .down: self = .down
+        case .downMirrored: self = .downMirrored
+        case .left: self = .left
+        case .leftMirrored: self = .leftMirrored
+        case .right: self = .right
+        case .rightMirrored: self = .rightMirrored
+        }
     }
 }
 

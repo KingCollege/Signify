@@ -16,6 +16,12 @@
 		0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A952380CCA800987D54 /* ObservableScan.swift */; };
 		0B6B4A982380D9FD00987D54 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */; };
 		5DBF39482380F3FC00A5A695 /* Sesgoritma.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DBF39472380F3FC00A5A695 /* Sesgoritma.mlmodel */; };
+		5DD079E123810D61001820DC /* Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DD079E023810D61001820DC /* Model.mlmodel */; };
+		5DD079E3238112A9001820DC /* SignLanguageRecognizer.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DD079E2238112A8001820DC /* SignLanguageRecognizer.mlmodel */; };
+		5DD079E5238113E6001820DC /* Hand_Sign_Recognition_3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DD079E4238113E6001820DC /* Hand_Sign_Recognition_3.mlmodel */; };
+		5DD079E72381259B001820DC /* model3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DD079E62381259A001820DC /* model3.mlmodel */; };
+		5DD079EB238147D0001820DC /* model4.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DD079EA238147D0001820DC /* model4.mlmodel */; };
+		5DD079ED23814B8F001820DC /* sign.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DD079EC23814B8F001820DC /* sign.mlmodel */; };
 		5DFD3A44238070F3002962EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A43238070F3002962EB /* AppDelegate.swift */; };
 		5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A45238070F3002962EB /* SceneDelegate.swift */; };
 		5DFD3A48238070F3002962EB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A47238070F3002962EB /* CameraView.swift */; };
@@ -33,7 +39,6 @@
 		5DFD3A882380CA3C002962EB /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A872380CA3C002962EB /* ViewRouter.swift */; };
 		5DFD3A8A2380CC0A002962EB /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A892380CC0A002962EB /* RootView.swift */; };
 		5DFD3A8C2380EB92002962EB /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A8B2380EB92002962EB /* DictionaryView.swift */; };
-		5DFD3A8E2380EC0C002962EB /* Model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD3A8D2380EC0C002962EB /* Model.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,12 @@
 		0B6B4A952380CCA800987D54 /* ObservableScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ObservableScan.swift; path = Signify/Views/ObservableScan.swift; sourceTree = SOURCE_ROOT; };
 		0B6B4A972380D9FD00987D54 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		5DBF39472380F3FC00A5A695 /* Sesgoritma.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Sesgoritma.mlmodel; sourceTree = "<group>"; };
+		5DD079E023810D61001820DC /* Model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Model.mlmodel; sourceTree = "<group>"; };
+		5DD079E2238112A8001820DC /* SignLanguageRecognizer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SignLanguageRecognizer.mlmodel; sourceTree = "<group>"; };
+		5DD079E4238113E6001820DC /* Hand_Sign_Recognition_3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Hand_Sign_Recognition_3.mlmodel; sourceTree = "<group>"; };
+		5DD079E62381259A001820DC /* model3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = model3.mlmodel; sourceTree = "<group>"; };
+		5DD079EA238147D0001820DC /* model4.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = model4.mlmodel; sourceTree = "<group>"; };
+		5DD079EC23814B8F001820DC /* sign.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = sign.mlmodel; sourceTree = "<group>"; };
 		5DFD3A40238070F3002962EB /* Signify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Signify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DFD3A43238070F3002962EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DFD3A45238070F3002962EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +97,6 @@
 		5DFD3A872380CA3C002962EB /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewRouter.swift; path = Signify/Views/ViewRouter.swift; sourceTree = SOURCE_ROOT; };
 		5DFD3A892380CC0A002962EB /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		5DFD3A8B2380EB92002962EB /* DictionaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
-		5DFD3A8D2380EC0C002962EB /* Model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Model.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +154,12 @@
 				5DFD3A43238070F3002962EB /* AppDelegate.swift */,
 				5DFD3A45238070F3002962EB /* SceneDelegate.swift */,
 				5DBF39472380F3FC00A5A695 /* Sesgoritma.mlmodel */,
-				5DFD3A8D2380EC0C002962EB /* Model.mlmodel */,
+				5DD079E023810D61001820DC /* Model.mlmodel */,
+				5DD079EA238147D0001820DC /* model4.mlmodel */,
+				5DD079EC23814B8F001820DC /* sign.mlmodel */,
+				5DD079E62381259A001820DC /* model3.mlmodel */,
+				5DD079E2238112A8001820DC /* SignLanguageRecognizer.mlmodel */,
+				5DD079E4238113E6001820DC /* Hand_Sign_Recognition_3.mlmodel */,
 				5DFD3A49238070F8002962EB /* Assets.xcassets */,
 				5DFD3A4E238070F8002962EB /* LaunchScreen.storyboard */,
 				5DFD3A51238070F8002962EB /* Info.plist */,
@@ -361,7 +376,10 @@
 				5DFD3A7823807D22002962EB /* TranslatorView.swift in Sources */,
 				5DFD3A44238070F3002962EB /* AppDelegate.swift in Sources */,
 				5DFD3A7A238087AB002962EB /* CustomTextField.swift in Sources */,
+				5DD079E72381259B001820DC /* model3.mlmodel in Sources */,
+				5DD079ED23814B8F001820DC /* sign.mlmodel in Sources */,
 				5DFD3A882380CA3C002962EB /* ViewRouter.swift in Sources */,
+				5DD079E5238113E6001820DC /* Hand_Sign_Recognition_3.mlmodel in Sources */,
 				5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */,
 				5DFD3A822380881D002962EB /* TextFieldObservable.swift in Sources */,
 				5DFD3A48238070F3002962EB /* CameraView.swift in Sources */,
@@ -370,16 +388,18 @@
 				0B635DF82380A0D8006D115F /* CameraControlLayerView.swift in Sources */,
 				0B6B4A982380D9FD00987D54 /* SwiftUIView.swift in Sources */,
 				5DFD3A46238070F3002962EB /* SceneDelegate.swift in Sources */,
-				5DFD3A8E2380EC0C002962EB /* Model.mlmodel in Sources */,
+				5DD079E123810D61001820DC /* Model.mlmodel in Sources */,
 				0B635DF02380897A006D115F /* CameraViewUIKit.swift in Sources */,
 				5DBF39482380F3FC00A5A695 /* Sesgoritma.mlmodel in Sources */,
 				5DFD3A48238070F3002962EB /* CameraView.swift in Sources */,
 				0B6B4A962380CCA800987D54 /* ObservableScan.swift in Sources */,
 				5DFD3A8C2380EB92002962EB /* DictionaryView.swift in Sources */,
 				0B635DF623809A33006D115F /* Alphabet.swift in Sources */,
+				5DD079E3238112A9001820DC /* SignLanguageRecognizer.mlmodel in Sources */,
 				0B635DFC2380B66F006D115F /* BlurView.swift in Sources */,
 				0B635DEE23807DCE006D115F /* CameraViewController.swift in Sources */,
 				0B635DF423808E0F006D115F /* CameraViewWrapper.swift in Sources */,
+				5DD079EB238147D0001820DC /* model4.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

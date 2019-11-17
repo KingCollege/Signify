@@ -21,7 +21,11 @@ struct CustomTextField: View {
             Image(systemName: iconName)
             .font(Font.body.weight(.bold))
             .foregroundColor(Color("lightGray"))
-            TextField("Type Something...", text: $textFieldObsver.text ).autocapitalization(.allCharacters)
+            TextField("Type Something...", text: $textFieldObsver.text, onEditingChanged: { value in
+                if !value {
+                    self.textFieldObsver.editing = false
+                }
+            }).autocapitalization(.allCharacters)
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30)
             .font(.headline)
         }.padding(.all, 10)

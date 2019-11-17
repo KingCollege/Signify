@@ -18,7 +18,7 @@ struct CameraControlLayerView: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
             Spacer()
-            ResultCard(letter: scanData.letter, sequence: scanData.sequence)
+            ResultCard(letter: scanData.letter, sequence: scanData.sequence, scanData: scanData)
             
         }.padding(.horizontal)
             .padding(.top, 64)
@@ -29,11 +29,14 @@ struct CameraControlLayerView: View {
 struct ResultCard: View {
      var letter: String
      var sequence: Array<Character>
-    
-    
+    var scanData: ObservableScan
     
     var body: some View {
         ZStack(alignment: .topLeading) {
+//            if image != nil{
+//                Image(uiImage: image!)
+//            }
+
             BlurView(style: .systemUltraThinMaterialLight)
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .frame(height: 230)
@@ -49,6 +52,7 @@ struct ResultCard: View {
                         .fontWeight(.light)
                         .foregroundColor(Color.white)
                         .padding(.horizontal, 5)
+                    .lineLimit(1)
                 }.frame(minWidth: 0, maxWidth: .infinity)
                 Text("Sequence")
                     .font(.system(size: 18))
@@ -58,9 +62,11 @@ struct ResultCard: View {
                     Text(String(self.sequence))
                         .font(.title)
                         .foregroundColor(Color.white)
+                        .lineLimit(1)
                     Spacer()
                     Button(action: {
-                        
+                        self.scanData.letter = "Nothing..."
+                        self.scanData.sequence = []
                     }) {
                         Image(systemName: "arrow.clockwise.circle.fill")
                             .resizable()
@@ -70,7 +76,7 @@ struct ResultCard: View {
 
                 }
             }.padding(20)
-        }
+        }.padding(.bottom, 120)
         
     }
 }
