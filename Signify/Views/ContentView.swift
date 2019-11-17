@@ -9,8 +9,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    //let cameraViewController: CameraViewController
+    @ObservedObject var scanData = ObservableScan()
+    
+    
+    init() {
+        //self.cameraViewController = CameraViewController(observed: scanData)
+
+    }
+    
     var body: some View {
-        Text("Hello, World!")
+        ZStack {
+            CameraViweWrapper(viewController: CameraViewController(observed: scanData))
+           
+            CameraControlLayerView(scanData: self.scanData)
+        }.edgesIgnoringSafeArea(.all)
+        .expand()
+    }
+}
+
+extension View {
+    func expand() -> some View {
+        return frame(
+            minWidth: 0,
+            maxWidth: .infinity,
+            minHeight: 0,
+            maxHeight: .infinity,
+            alignment: .topLeading
+        )
     }
 }
 
